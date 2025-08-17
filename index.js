@@ -1,12 +1,13 @@
 const http = require('http');
 
-const hostname = '0.0.0.0'; // Use 0.0.0.0 for Render
+const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World! This is my test server.');
+  // Set the status code to 204 (No Content)
+  res.statusCode = 204; 
+  // End the response without sending any data
+  res.end();
 });
 
 server.listen(port, hostname, () => {
